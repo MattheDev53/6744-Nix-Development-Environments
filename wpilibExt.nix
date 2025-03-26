@@ -1,14 +1,14 @@
 { pkgs ? import <nixpkgs> }:
 
 pkgs.vscode-utils.buildVscodeExtension {
-  pname = "my-extension";  # A unique name for your extension in Nixpkgs
-  version = "1.2.3";       # Match the extension version
+  pname = "wpilibsuite.vscode-wpilib";  # A unique name for your extension in Nixpkgs
+  version = "2025.3.1";       # Match the extension version
 
   src = pkgs.fetchFromGitHub {
-    owner = "owner";        # Replace with the GitHub repository owner
-    repo = "repo";         # Replace with the GitHub repository name
-    rev = "v1.2.3";          # Replace with the release tag
-    hash = "sha256-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; # Replace with the actual SHA256 hash of the .vsix file
+    owner = "wpilibsuite";
+    repo = "vscode-wpilib";
+    rev = "v2025.3.1";          # Replace with the release tag
+    hash = "sha256-529F5404AE7334B85A903CAA2E41607BB42CF03500F6D21FCBF33AD69727E8FD"; # Replace with the actual SHA256 hash of the .vsix file
   };
 
   # If `fetchFromGitHub` doesn't work, you may need `fetchurl`
@@ -17,12 +17,12 @@ pkgs.vscode-utils.buildVscodeExtension {
   #   sha256 = "sha256-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
   # };
 
-  name = "my-extension-1.2.3"; # The name of the built package
+  name = "wpilibsuite.vscode-wpilib"; # The name of the built package
 
   meta = {
-    description = "My custom VSCode extension";
-    homepage = "https://github.com/owner/repo";
-    license = pkgs.lib.licenses.mit; # Replace with the correct license
+    description = "WPILib Extension";
+    homepage = "https://github.com/wpilibsuite/vscode-wpilib";
+    license = pkgs.lib.licenses.bsd3; # Replace with the correct license
     maintainers = with pkgs.lib.maintainers; [  # Add your Nixpkgs maintainer details if applicable
       # yourNixpkgsUsername
     ];
