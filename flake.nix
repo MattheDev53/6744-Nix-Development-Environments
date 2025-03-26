@@ -6,10 +6,14 @@
     # this'll be running under WSL most likely,
     # but I'm not sure if I'll run NixOS WSL
     # or Ubuntu WSL with Nix
-    nixpkgs.url = ""; 
-    home-manager.url = "github:nix-community/home-manager"
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs, home-manager }:{
+  outputs = { self, nixpkgs, home-manager }:
+  {
     homeConfigurations = {
       user = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs
