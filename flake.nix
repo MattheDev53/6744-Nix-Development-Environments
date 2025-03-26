@@ -16,6 +16,11 @@
           { system = "x86_64-linux"; };
         modules = [ ./users/user/default.nix ];
       };
+      magames = home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs
+          { system = "x86_64-linux"; };
+        modules = [ ./users/magames/default.nix ];
+      };
     };
-  }
+  };
 }
