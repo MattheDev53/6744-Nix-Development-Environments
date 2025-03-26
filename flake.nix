@@ -17,5 +17,5 @@
         modules = [ ./users/user/default.nix ];
       };
     };
-  };
+  }
 }

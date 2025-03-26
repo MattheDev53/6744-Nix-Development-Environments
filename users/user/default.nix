@@ -4,5 +4,6 @@
   imports = [
     ./user.nix
     ./packages.nix
+    ./programs/default.nix
   ];
 }
