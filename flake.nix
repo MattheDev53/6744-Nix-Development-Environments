@@ -12,18 +12,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  let
+    system = "x86_64-linux";
+  in
   {
-    defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
     homeConfigurations = {
       "user" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs
-          { system = "x86_64-linux"; };
+        pkgs = import inputs.nixpkgs { inherit system; config.allowUnfree = true; };
         modules = [ ./users/user/default.nix ];
       };
       "magames" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs
-          { system = "x86_64-linux"; };
+        pkgs = import inputs.nixpkgs { inherit system; config.allowUnfree = true; };
         modules = [ ./users/magames/default.nix ];
       };
     };
