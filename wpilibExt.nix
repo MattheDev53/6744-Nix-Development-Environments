@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> }:
+{ pkgs ? import <nixpkgs> {} }:
 
 pkgs.vscode-utils.buildVscodeExtension {
   pname = "wpilibsuite.vscode-wpilib";  # A unique name for your extension in Nixpkgs
