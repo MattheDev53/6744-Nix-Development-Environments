@@ -1,8 +1,5 @@
 { inputs, config, pkgs, lib, ... }:
 
-let
-  vscode-wpilib = import ../../../wpilibExt.nix { inherit pkgs; };
-in 
 {
 programs.vscode = {
     enable = true;
@@ -24,7 +21,7 @@ programs.vscode = {
         vscjava.vscode-gradle
         vscjava.vscode-maven
         redhat.java
-      ] ++ [ pkgs.vscode-wpilib ];
+      ];
       userSettings = {
         "editor.fontFamily" = "JetBrains Mono";
         "editor.fontLigatures" = true;
