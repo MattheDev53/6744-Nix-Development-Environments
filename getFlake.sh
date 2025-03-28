@@ -11,5 +11,4 @@ if [ "$(grep 'experimental-features = nix-command flakes' /etc/nix/nix.conf)" ==
 fi
 
 # Updates/Installs the flake from GitHub
-#test
 nix run github:nix-community/home-manager switch -- --flake github:MattheDev53/6744-Nix-Development-Environments
