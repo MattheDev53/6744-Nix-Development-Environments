@@ -7,5 +7,4 @@
     jetbrains-mono
     nerd-fonts.jetbrains-mono
   ];
-  imports = [];
 }

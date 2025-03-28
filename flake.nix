@@ -15,13 +15,12 @@
   in
   {
     homeConfigurations = {
-      "user" = home-manager.lib.homeManagerConfiguration {
-        pkgs = pkgs; # Important: Pass pkgs here
-        modules = [ ./users/user/default.nix ];
-      };
       "magames" = home-manager.lib.homeManagerConfiguration {
         pkgs = pkgs; # Important: Pass pkgs here
-        modules = [ ./users/magames/default.nix ];
+        modules = [ 
+          ./users/base/default.nix
+          ./users/magames/default.nix
+        ];
       };
     };
   };

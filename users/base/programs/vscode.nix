@@ -3,12 +3,9 @@
 {
 programs.vscode = {
     enable = true;
-    profiles.user = {
+    profiles.default = {
       extensions = with pkgs.vscode-extensions; [
-        sainnhe.gruvbox-material
-  
         bbenoist.nix
-        arrterian.nix-env-selector
   
         vscjava.vscode-java-pack
         
@@ -18,7 +15,6 @@ programs.vscode = {
         vscjava.vscode-gradle
         vscjava.vscode-maven
         redhat.java
-
       ];
       userSettings = {
         "extensions.autoUpdate" = false;
@@ -44,7 +40,6 @@ programs.vscode = {
         "git.ignoreMissingGitWarning" = true;
         "workbench.colorTheme" = "Gruvbox Material Dark";
         "settingsSync.ignoredSettings" = [];
-        "editor.fontFamily" = "JetBrains Mono";
         "workbench.iconTheme" = "gruvbox-material-icon-theme";
         "redhat.telemetry.enabled" = false;
         "chat.commandCenter.enabled" = false;
@@ -53,8 +48,8 @@ programs.vscode = {
         "diffEditor.ignoreTrimWhitespace" = false;
         "wpilib.autoStartRioLog" = false;
         "editor.tabSize" = 2;
+ 
       };
-
     };
   };
 }
