@@ -2,17 +2,18 @@
 
 {
 programs.vscode = {
-    enable = true;
     package = pkgs.vscodium;
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
         sainnhe.gruvbox-material
         vscodevim.vim
+
         jnoortheen.nix-ide
         arrterian.nix-env-selector
+        bbenoist.nix
       ];
       userSettings = {
-        "editor.fontFamily" = "JetBrains Mono";
+        "workbench.colorTheme" = "Gruvbox Material Dark";
       };
     };
   };

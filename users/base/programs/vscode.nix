@@ -5,8 +5,6 @@ programs.vscode = {
     enable = true;
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
-        bbenoist.nix
-  
         vscjava.vscode-java-pack
         
         vscjava.vscode-java-debug
@@ -38,7 +36,6 @@ programs.vscode = {
         "files.autoSave" = "afterDelay";
         "java.completion.matchCase" = "off";
         "git.ignoreMissingGitWarning" = true;
-        "workbench.colorTheme" = "Gruvbox Material Dark";
         "settingsSync.ignoredSettings" = [];
         "workbench.iconTheme" = "gruvbox-material-icon-theme";
         "redhat.telemetry.enabled" = false;
@@ -47,8 +44,8 @@ programs.vscode = {
         "git.confirmSync" = false;
         "diffEditor.ignoreTrimWhitespace" = false;
         "wpilib.autoStartRioLog" = false;
+        "editor.fontFamily" = "JetBrains Mono";
         "editor.tabSize" = 2;
- 
       };
     };
   };
