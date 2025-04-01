@@ -18,15 +18,15 @@
       "magames" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ 
-          ./users/.base/default.nix
-          ./users/magames/default.nix
+          ./users/.base/.default.nix
+          ./users/magames/.default.nix
         ];
       };
       "leo" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          ./users/.base/default.nix
-          ./users/leo/default.nix
+          ./users/.base/.default.nix
+          ./users/leo/.default.nix
         ];
       };
     };
