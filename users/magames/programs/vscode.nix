@@ -6,7 +6,7 @@ programs.vscode = {
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
         catppuccin.catppuccin-vsc-icons
-        catppuccin.catppuccin-vsc-icons
+        catppuccin.catppuccin-vsc
 
         jnoortheen.nix-ide
         arrterian.nix-env-selector
