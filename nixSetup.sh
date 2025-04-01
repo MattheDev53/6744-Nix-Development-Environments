@@ -15,4 +15,4 @@ else
   echo "Nix Command and Flakes are already enabled"
 fi
 
-echo "Nix is now installed, please run 'exec \$SHELL' to restart your shell"
+echo "Nix is installed, please run 'exec \$SHELL' to restart your shell"
