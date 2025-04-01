@@ -28,7 +28,7 @@
           ./users/base/default.nix
           ./users/leo/default.nix
         ];
-      }
+      };
     };
   };
 }

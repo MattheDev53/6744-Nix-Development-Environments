@@ -4,5 +4,6 @@
   imports = [
     ./vscode.nix
     ./git.nix
+    ./chromium.nix
   ];
 }

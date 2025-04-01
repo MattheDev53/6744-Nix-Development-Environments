@@ -2,6 +2,6 @@
 
 {
   programs.git = {
-    enable = true;
+    enable = lib.mkDefault true;
   };
 }
