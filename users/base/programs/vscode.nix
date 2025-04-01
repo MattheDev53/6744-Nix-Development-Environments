@@ -37,7 +37,6 @@ programs.vscode = {
         "java.completion.matchCase" = "off";
         "git.ignoreMissingGitWarning" = true;
         "settingsSync.ignoredSettings" = [];
-        "workbench.iconTheme" = "gruvbox-material-icon-theme";
         "redhat.telemetry.enabled" = false;
         "chat.commandCenter.enabled" = false;
         "editor.fontLigatures" = true;
