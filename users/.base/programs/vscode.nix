@@ -45,6 +45,7 @@ programs.vscode = {
         "wpilib.autoStartRioLog" = false;
         "editor.fontFamily" = "JetBrains Mono";
         "editor.tabSize" = 2;
+        "java.jdt.ls.java.home" = "${pkgs.jdk}";
       };
     };
   };
