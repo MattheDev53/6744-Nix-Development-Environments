@@ -13,12 +13,6 @@
         flutterPackage = pkgs.flutter.override { channel = "stable"; }; # Or "beta", "dev"
       in
       {
-        devShell = pkgs.mkShell {
-          buildInputs = [
-            flutterPackage
-          ];
-        };
-
         packages = {
           # Example for building a Linux desktop app:
           linux = pkgs.stdenv.mkDerivation {
@@ -27,11 +21,10 @@
               owner = "mjansen4857";
               repo = "pathplanner";
               rev = "main";
-              sha256 = "";
+              sha256 = "sha256-wfkUW7W7Yffz+ejzOL5lFwx2O8MOsi8zJDakS1XRLFA=";
             };
 
             buildInputs = [
-              flutterPackage
             ];
 
             buildPhase = ''
