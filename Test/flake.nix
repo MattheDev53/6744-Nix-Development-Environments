@@ -44,7 +44,7 @@
           };
         };
 
-        defaultPackage = self.packages.android; # Or self.packages.linux, etc.
+        defaultPackage = self.packages.linux; 
       }
     );
 }
