@@ -8,6 +8,8 @@ programs.vscode = {
         catppuccin.catppuccin-vsc-icons
         catppuccin.catppuccin-vsc
 
+        vscodevim.vim
+
         jnoortheen.nix-ide
         arrterian.nix-env-selector
         bbenoist.nix
