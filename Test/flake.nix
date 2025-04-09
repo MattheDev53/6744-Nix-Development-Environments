@@ -22,10 +22,11 @@
         packages = {
           # Example for building a Linux desktop app:
           linux = pkgs.stdenv.mkDerivation {
-            name = "my-flutter-app-linux";
+            name = "pathplanner";
             src = pkgs.fetchFromGitHub {
               owner = "mjansen4857";
               repo = "pathplanner";
+              rev = "main";
               sha256 = "";
             };
 
@@ -43,8 +44,6 @@
             '';
           };
         };
-
-        defaultPackage = self.packages.linux; 
       }
     );
 }
