@@ -10,9 +10,13 @@
     flake-utils.lib.eachSystem [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ] (system:
       let
         pkgs = import nixpkgs { inherit system; };
-        flutterPackage = pkgs.flutter.override { channel = "stable"; }; # Or "beta", "dev"
       in
       {
+        devShell = pkgs.mkShell {
+          buildInputs = [
+            pkgs.flutter
+          ];
+        };
         packages = {
           # Example for building a Linux desktop app:
           linux = pkgs.stdenv.mkDerivation {
@@ -25,9 +29,11 @@
             };
 
             buildInputs = [
+              pkgs.flutter
             ];
 
             buildPhase = ''
+              export HOME=$(pwd)
               flutter build linux
             '';
 
