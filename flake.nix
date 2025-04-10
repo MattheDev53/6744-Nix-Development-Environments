@@ -7,8 +7,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    frc-nix.url = "github:FRC3636/frc-nix";
   };
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, frc-nix, ... }@inputs:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
@@ -17,7 +18,7 @@
     homeConfigurations = {
       "magames" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ 
+        modules = [
           ./users/.base/.default.nix
           ./users/magames/.default.nix
         ];
