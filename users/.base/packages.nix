@@ -6,6 +6,8 @@
     # Fonts
     jetbrains-mono
     nerd-fonts.jetbrains-mono
+
+    # FRC Packages
     inputs.frc-nix.packages.x86_64-linux.pathplanner
   ];
 }
