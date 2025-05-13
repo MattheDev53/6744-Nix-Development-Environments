@@ -21,18 +21,19 @@
     "frc-nix": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "nix-github-actions": "nix-github-actions",
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1715302704,
-        "narHash": "sha256-4yBeYD+1r8UxCcL3e57EGENdgJbaVqShZ1V3QjekBA4=",
-        "owner": "FRC3636",
+        "lastModified": 1743468064,
+        "narHash": "sha256-IkJPD05d2dVk9/TRUA9Lwpv87m4HtLnb3b1zNBDeqAE=",
+        "owner": "frc4451",
         "repo": "frc-nix",
-        "rev": "51f34c0195c27fefa709f50d1bd3eac07dc9c148",
+        "rev": "a6d618dd849c89bcbe85e5d9e036b70dbf850f5e",
         "type": "github"
       },
       "original": {
-        "owner": "FRC3636",
+        "owner": "frc4451",
         "repo": "frc-nix",
         "type": "github"
       }
@@ -54,6 +55,27 @@
       "original": {
         "owner": "nix-community",
         "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nix-github-actions": {
+      "inputs": {
+        "nixpkgs": [
+          "frc-nix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1737420293,
+        "narHash": "sha256-F1G5ifvqTpJq7fdkT34e/Jy9VCyzd5XfJ9TO8fHhJWE=",
+        "owner": "nix-community",
+        "repo": "nix-github-actions",
+        "rev": "f4158fa080ef4503c8f4c820967d946c2af31ec9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-github-actions",
         "type": "github"
       }
     },

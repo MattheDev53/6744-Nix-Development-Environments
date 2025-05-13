@@ -7,12 +7,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    frc-nix.url = "github:FRC3636/frc-nix";
+    frc-nix.url = "github:frc4451/frc-nix";
   };
   outputs = { self, nixpkgs, home-manager, frc-nix, ... }@inputs:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+    frc-nix = inputs;
   in
   {
     homeConfigurations = {
