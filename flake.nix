@@ -27,6 +27,9 @@
         ];
       };
       "leo" = home-manager.lib.homeManagerConfiguration {
+        extraSpecialArgs = {
+          inherit inputs;
+        };
         inherit pkgs;
         modules = [
           ./users/.base/.default.nix
